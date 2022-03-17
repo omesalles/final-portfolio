@@ -1,0 +1,42 @@
+footer {
+  --line-height: 3rem;
+  background-color: lightgray;
+  position: fixed;
+  width: 100vw;
+  top: calc(100vh - var(--line-height));
+  left: 0vw;
+  line-height: var(--line-height);
+  z-index: 1;
+  border-color: red;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: auto auto 280px;
+  height: 3rem;
+}
+.soc {
+  display: inline;
+}
+
+.technocampus-img {
+  width: 200px;
+  margin: auto;
+  height: auto;
+  display: inline;
+}
+
+@media (max-width: 900px) {
+  .soc {
+    display: none;
+  }
+}
+
+@media (max-width: 648px) {
+  .soc {
+    display: none;
+  }
+  .technocampus-img {
+    display: none;
+  }
+}

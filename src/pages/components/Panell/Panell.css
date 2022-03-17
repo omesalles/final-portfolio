@@ -1,0 +1,40 @@
+.page-container {
+  display: flex;
+  flex: 1;
+}
+
+.page-content {
+  flex: 1;
+}
+
+.menu-contextual-menu,
+.aside-menu {
+  /* 12em is the width of the columns */
+  flex: 0 0 12em;
+}
+
+.menu-contextual-menu {
+  /* put the nav on the left */
+  order: -1;
+}
+
+.page-container,
+.menu-contextual-menu,
+.aside-menu {
+  padding: 1rem;
+}
+
+@media (max-width: 900px) {
+  .aside-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 648px) {
+  .aside-menu {
+    display: none;
+  }
+  .menu-contextual-menu {
+    display: none;
+  }
+}
