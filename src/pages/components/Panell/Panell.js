@@ -6,14 +6,16 @@ export function Panell(props) {
       <nav className="menu-contextual-menu">
         <ul>
           {props.panellLeft.map((v, i) => {
-            return <li key={i}>{v}</li>;
+            return <Link to={{hash: "#"+{i}}}
+                      <li key={i}>{v}</li>
+                    </Link>;
           })}
         </ul>
       </nav>
       <div className="page-content">
         <h1>{props.title}</h1>
         {props.panellMiddle.map((v, i) => {
-          return <p key={i}>{v}</p>;
+          return <p key={i} id={i}>{v}</p>;
         })}
       </div>
       <aside className="aside-menu">
