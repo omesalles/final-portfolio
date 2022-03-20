@@ -10,7 +10,7 @@ export function Resources() {
   "",
   "A demonstration of what can be accomplished through CSS-based design. Check how the style sheet" + 
   "completely transforms a webpage.",
-  "Library for coping objects in JavaScript",
+  "Library for copying objects in JavaScript",
   "Webflow is a SaaS application that allows building websites using visual editing software.",
 ];
   return (

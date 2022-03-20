@@ -3,7 +3,6 @@ import "./Panel.css";
 import { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 
-
 export function Panel(props) {
   const width = useWidth();
   return (
@@ -163,7 +162,7 @@ function Resources(props) {
                 (v, i) => {
                   return (
                     <HashLink key={i} to={"/Resources#" + v}>
-                      <p>{v}</p>
+                      <p dangerouslySetInnerHTML={{__html: v}} />
                     </HashLink>
                   );
                 }
@@ -184,7 +183,7 @@ function PageContent(props) {
           <div key={i}>
             <span className="paragraph-content" id={props.panelLeft[i]}></span>
             <h2 className="title-paragraph">{props.panelLeft[i]}</h2>
-            <p>{v}</p>
+            <p dangerouslySetInnerHTML={{__html: v}} />
           </div>
         );
       })}

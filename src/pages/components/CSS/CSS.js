@@ -3,7 +3,7 @@ import { Panel } from "../Panel";
 export function CSS() {
   let title = "CSS";
   let panelLeft = ["Box model", "Flex", "Grid", "Animations", "!important", "basic design rules"];
-  let panelRight = ["W3Schools", "CSS tricks", 3];
+  let panelRight = ["W3Schools", "CSS tricks", "3"];
   let panelMiddle = [
     "Box model",
     "Flex",
