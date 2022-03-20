@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  --text-background-color: white;
+  --panel-background-color: #eee;
+  --panel-hover-background-color: #ccc;
+  --text-color: #444;
+  --padding: 10pt;
+  --menu-font-size: 14pt;
+}
+
+.Accordio__tab {
+  float: left;
+  border: 1px solid var(--panel-hover-background-color);
+  width: inherit;
+  min-width: 120px;
+  height: 100vh;
+  background-color: var(--panel-background-color);
+}
+
+.Accordio__menu-item {
+  background-color: var(--panel-background-color);
+  color: var(--text-color);
+  cursor: pointer;
+  padding: var(--padding);
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: var(--menu-font-size);
+}
+
+.Accordio__menu-item:hover {
+  background-color: var(--panel-hover-background-color);
+  transition: 0.5s;
+}
+
+.Accordio__menu-item:after {
+  content: "\02795";
+  font-size: calc(0.8 * var(--menu-font-size));
+  float: right;
+}
+
+.Accordio__active:after {
+  content: "\2212";
+  font-size: calc(0.9 * var(--menu-font-size));
+  float: right;
+}
+
+.Accordio__panel {
+  background-color: var(--text-background-color);
+  padding-left: var(--padding);
+  padding-right: 5pt;
+}
+
+.Accordio__show-panel {
+  display: block;
+}
+
+.Accordio__hide-panel {
+  display: none;
+}

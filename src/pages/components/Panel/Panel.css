@@ -7,8 +7,8 @@
   min-width: none;
   font-size: 1.25vw;
 }
-.vertical-line-right {
-  border-left: 6px solid lightgray;
+.vertical-line-left {
+  border-left: 3px solid lightgray;
   height: 100vh;
   position: fixed;
   top: 2rem;
@@ -16,12 +16,12 @@
   height: 100%;
 }
 
-.vertical-line-left {
-  border-left: 6px solid lightgray;
+.vertical-line-right {
+  border-left: 3px solid lightgray;
   height: 100vh;
   position: fixed;
   top: 2rem;
-  left: 87.5%;
+  left: 86.5%;
   height: 100%;
 }  
 
@@ -39,6 +39,7 @@
 }
 
 .aside-menu {
+  margin-left: -2%;
   grid-area: right;
   position: fixed;
   left: calc(100vw - 100px);
@@ -70,7 +71,7 @@
 .context-menu {
   font-size: 2.5vw;
 }
-.vertical-line-left{
+.vertical-line-right{
   display: none;
 }
 }

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./pages/components/Layout";
 import { globalRoutes } from "./pages/globalRoutes";
-
+import "./App.css";
 function App() {
   return (
     <BrowserRouter basename="/">

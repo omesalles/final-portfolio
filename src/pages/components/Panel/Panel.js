@@ -1,5 +1,8 @@
+import { Accordio } from "../Accordio";
 import "./Panel.css";
 import { useState, useEffect } from "react";
+import { HashLink } from "react-router-hash-link";
+
 
 export function Panel(props) {
   const width = useWidth();
@@ -87,7 +90,7 @@ function PanelTablet(props) {
   );
 }
 
-function PanelMobile(props) {
+function PanelMobileOld(props) {
   /*show all in a row, the title and the corresponding paragraph*/ 
   return (
     <>
@@ -102,6 +105,25 @@ function PanelMobile(props) {
             </div>
           );
         })}
+        <Resources listOfResources={props.panelRight} />
+        <br />
+      </div>
+    </>
+  );
+}
+
+function PanelMobile(props) {
+
+   /*build and accordio object */
+ const accordioObject = props.panelLeft.reduce(
+   (o, key, i) => ({ ...o, [key]: {"text":props.panelMiddle[i]}}), {});
+  console.log(accordioObject);
+
+  return (
+    <>
+      <div className="page-content">
+        <h1>{props.title}</h1>
+        <Accordio menuItems={accordioObject} />
         <Resources listOfResources={props.panelRight} />
         <br />
       </div>
@@ -140,9 +162,9 @@ function Resources(props) {
               props.listOfResources.map(
                 (v, i) => {
                   return (
-                    <a key={i} href={v}>
+                    <HashLink key={i} to={"/Resources#" + v}>
                       <p>{v}</p>
-                    </a>
+                    </HashLink>
                   );
                 }
               )
