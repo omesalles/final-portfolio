@@ -1,0 +1,37 @@
+.soc {
+  display: inline;
+  width: 33.3vw;
+  font-family: 'OpenSansRegular', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: white;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.footer-button{
+  width: 33.3%;
+}
+
+.tecnocampus-img {
+  width: auto;
+  margin-left: 0px;
+  height: 2rem;
+  display: inline;
+}
+
+@media (max-width: 768px) {
+  .soc {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .soc {
+    display: none;
+  }
+  .tecnocampus-img {
+    display: none;
+  }
+}
