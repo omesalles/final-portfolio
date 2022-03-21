@@ -21,12 +21,14 @@
 .page-content {
   grid-area: main;
   text-align: left;
-  height: 1000px;
+  width: 75%;
+  overflow-wrap: break-word;
   position: fixed;
   left: 12.5%;
-  margin-left: 10px;
+  padding-left: 10px;
   font-size: 16px;
-  padding-top: 5px;
+  padding-top: 6px;
+  padding-right: 5px;
 }
 .paragraph-content {
   display: block;
@@ -101,7 +103,10 @@
     padding: 10px;
   }
   .page-content {
+    display: flex;
+    flex-direction: column;
     left: 0%;
+    width: 100%;
   }
 
   .aside-menu {

@@ -1,6 +1,6 @@
 import { Accordio } from "../Accordio";
 import "./Panel.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 import { HashLink } from "react-router-hash-link";
 
 export function Panel(props) {
@@ -92,10 +92,14 @@ function PanelTablet(props) {
 
 function PanelMobile(props) {
   /*build and accordio object */
-  const accordioObject = props.panelLeft.reduce(
+  let accordioObject = props.panelLeft.reduce(
     (o, key, i) => ({ ...o, [key]: { text: props.panelMiddle[i] } }),
     {}
   );
+  let resourcesList = "<p>" + props.panelRight.join("</p><p>") + "</p>";
+  let Resources = { text: resourcesList };
+  console.log(Resources);
+  accordioObject = { ...accordioObject, Resources };
   console.log(accordioObject);
 
   return (
@@ -103,7 +107,6 @@ function PanelMobile(props) {
       <div className="page-content">
         <h1>{props.title}</h1>
         <Accordio menuItems={accordioObject} />
-        <Resources listOfResources={props.panelRight} />
         <br />
       </div>
     </>

@@ -22,13 +22,16 @@ function MenuItems(props) {
           props.showOrNot ? "Accordio__show-panel" : "Accordio__hide-panel"
         }
       >
-        <div className="panel">{props.theText.text}</div>
+        <div
+          className="panel"
+          dangerouslySetInnerHTML={{ __html: props.theText.text }}
+        />
       </div>
     </>
   );
 }
 
-export function Accordio({menuItems}) {
+export function Accordio({ menuItems }) {
   let numberOfItems = Object.keys(menuItems).length;
   const [whichOpenedMenus, setWhichOpenedMenus] = useState(
     Array(numberOfItems).fill(false)
@@ -48,7 +51,7 @@ export function Accordio({menuItems}) {
             <MenuItems
               key={i}
               theMenu={x}
-              theText = {menuItems[x]}
+              theText={menuItems[x]}
               onPressed={() => toogleDisplay(i)}
               showOrNot={whichOpenedMenus[i]}
             />
