@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": "https://github.com/omesalles/final-portfolio.git",
+  "author": "omesalles <oscarmesalles@hotmail.com>",
+  "license": "MIT"
 }

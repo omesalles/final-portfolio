@@ -21,28 +21,26 @@
   height: 100vh;
   position: fixed;
   top: 2rem;
-  left: 86.5%;
+  left: 87.5%;
   height: 100%;
-}  
+}
 
-  
 .page-content {
   grid-area: main;
   text-align: left;
   height: 1000px;
 }
-.paragraph-content{
-  display:block;
-  height:2rem; 
-  margin-top:-2rem;
-  visibility:hidden;
+.paragraph-content {
+  display: block;
+  height: 2rem;
+  margin-top: -2rem;
+  visibility: hidden;
 }
 
 .aside-menu {
-  margin-left: -2%;
   grid-area: right;
   position: fixed;
-  left: calc(100vw - 100px);
+  left: 87.5vw;
   top: 2rem;
   font-size: 1.25vw;
   text-align: left;
@@ -55,45 +53,45 @@
     justify-content: right;
     align-items: center;
   }
-.layout {
-  font-family: sans-serif;
-  text-align: center;
-  display: grid;
-  grid-template-areas:
-    "header header header header header header header header"
-    "menu menu main main main main main main"
-    "footer footer footer footer footer footer footer footer";
-  padding: 10px;
-}
-.aside-menu {
-  display: none;
-}
-.context-menu {
-  font-size: 2.5vw;
-}
-.vertical-line-right{
-  display: none;
-}
+  .layout {
+    font-family: sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+      "header header header header header header header header"
+      "menu menu main main main main main main"
+      "footer footer footer footer footer footer footer footer";
+    padding: 10px;
+  }
+  .aside-menu {
+    display: none;
+  }
+  .context-menu {
+    font-size: 2.5vw;
+  }
+  .vertical-line-right {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 328px) {
-.layout {
-  font-family: sans-serif;
-  text-align: center;
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  padding: 10px;
-}
-.aside-menu {
-  display: none;
-}
-.context-menu {
-  display: none;
-}
-.vertical-line-left{
-  display: none;
-}
+  .layout {
+    font-family: sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    padding: 10px;
+  }
+  .aside-menu {
+    display: none;
+  }
+  .context-menu {
+    display: none;
+  }
+  .vertical-line-left {
+    display: none;
+  }
 }
