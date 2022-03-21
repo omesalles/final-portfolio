@@ -5,7 +5,9 @@
   top: 2rem;
   position: fixed;
   overflow-wrap: break-word;
-  font-size: 16px;
+  font-size: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .vertical-line-left {
   border-left: 3px solid lightgray;
@@ -14,6 +16,23 @@
   top: 2rem;
   left: 12.5%;
   height: 100%;
+}
+
+.page-content {
+  grid-area: main;
+  text-align: left;
+  height: 1000px;
+  position: fixed;
+  left: 12.5%;
+  margin-left: 10px;
+  font-size: 16px;
+  padding-top: 5px;
+}
+.paragraph-content {
+  display: block;
+  height: 2rem;
+  margin-top: -2rem;
+  visibility: hidden;
 }
 
 .vertical-line-right {
@@ -25,26 +44,14 @@
   height: 100%;
 }
 
-.page-content {
-  grid-area: main;
-  text-align: left;
-  height: 1000px;
-  position: fixed;
-  left: 12.5%;
-}
-.paragraph-content {
-  display: block;
-  height: 2rem;
-  margin-top: -2rem;
-  visibility: hidden;
-}
-
 .aside-menu {
   grid-area: right;
   position: fixed;
   left: 87.5vw;
   top: 2rem;
   text-align: left;
+  padding-left: 10px;
+  font-size: 15px;
 }
 
 @media screen and (max-width: 768px) {
