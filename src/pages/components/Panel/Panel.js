@@ -1,6 +1,6 @@
 import { Accordio } from "../Accordio";
 import "./Panel.css";
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 
 export function Panel(props) {
@@ -51,6 +51,7 @@ function ContextMenu({ panelLeft }) {
 }
 
 function PanelDesktop(props) {
+  console.log(props);
   return (
     <>
       <ContextMenu panelLeft={props.panelLeft} />
@@ -96,11 +97,11 @@ function PanelMobile(props) {
     (o, key, i) => ({ ...o, [key]: { text: props.panelMiddle[i] } }),
     {}
   );
-  let resourcesList = "<p>" + props.panelRight.join("</p><p>") + "</p>";
-  let Resources = { text: resourcesList };
-  console.log(Resources);
-  accordioObject = { ...accordioObject, Resources };
-  console.log(accordioObject);
+  if (props.panelRight != null) {
+    let resourcesList = "<p>" + props.panelRight.join("</p><p>") + "</p>";
+    let Resources = { text: resourcesList };
+    accordioObject = { ...accordioObject, Resources };
+  }
 
   return (
     <>
@@ -143,7 +144,7 @@ function Resources(props) {
           {props.listOfResources.map((v, i) => {
             return (
               <HashLink key={i} to={"/Resources#" + v}>
-                <p dangerouslySetInnerHTML={{ __html: v }} />
+                <p>{v}</p>
               </HashLink>
             );
           })}
