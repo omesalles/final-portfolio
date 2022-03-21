@@ -36,15 +36,16 @@ export function Panel(props) {
 function ContextMenu({ panelLeft }) {
   return (
     <nav className="context-menu">
-        {panelLeft.map((v, i) => {
-          return (
-            <a key ={i} href={"#" + v}>
-              <p>{v}</p>
-            </a>
-          );
-        })}
-        <div className="vertical-line-right"></div>
-        <div className="vertical-line-left"></div>
+      <h3>Page Index</h3>
+      {panelLeft.map((v, i) => {
+        return (
+          <a key={i} href={"#" + v}>
+            <p>{v}</p>
+          </a>
+        );
+      })}
+      <div className="vertical-line-right"></div>
+      <div className="vertical-line-left"></div>
     </nav>
   );
 }
@@ -52,7 +53,7 @@ function ContextMenu({ panelLeft }) {
 function PanelDesktop(props) {
   return (
     <>
-      <ContextMenu panelLeft={props.panelLeft}/>
+      <ContextMenu panelLeft={props.panelLeft} />
       <div className="page-content">
         <PageContent
           title={props.title}
@@ -75,7 +76,7 @@ function PanelTablet(props) {
 
   return (
     <>
-      <ContextMenu panelLeft={copyPanelLeft}/>
+      <ContextMenu panelLeft={copyPanelLeft} />
       <div className="page-content">
         <PageContent
           title={props.title}
@@ -89,33 +90,12 @@ function PanelTablet(props) {
   );
 }
 
-function PanelMobileOld(props) {
-  /*show all in a row, the title and the corresponding paragraph*/ 
-  return (
-    <>
-      <div className="page-content">
-        <h1>{props.title}</h1>
-        {props.panelLeft.map((v, i) => {
-          return (
-            <div key={i}>
-              <span className="paragraph-content"></span>
-              <h2 className="title-paragraph">{props.panelLeft[i]}</h2>
-              <p>{props.panelMiddle[i]}</p>
-            </div>
-          );
-        })}
-        <Resources listOfResources={props.panelRight} />
-        <br />
-      </div>
-    </>
-  );
-}
-
 function PanelMobile(props) {
-
-   /*build and accordio object */
- const accordioObject = props.panelLeft.reduce(
-   (o, key, i) => ({ ...o, [key]: {"text":props.panelMiddle[i]}}), {});
+  /*build and accordio object */
+  const accordioObject = props.panelLeft.reduce(
+    (o, key, i) => ({ ...o, [key]: { text: props.panelMiddle[i] } }),
+    {}
+  );
   console.log(accordioObject);
 
   return (
@@ -153,25 +133,21 @@ function useWidth() {
 function Resources(props) {
   return (
     <>
-      {props.listOfResources != null && 
+      {props.listOfResources != null && (
         <>
           <span className="paragraph-content" id="Resources"></span>
           <h3>Resources</h3>
-            {
-              props.listOfResources.map(
-                (v, i) => {
-                  return (
-                    <HashLink key={i} to={"/Resources#" + v}>
-                      <p dangerouslySetInnerHTML={{__html: v}} />
-                    </HashLink>
-                  );
-                }
-              )
-            }
+          {props.listOfResources.map((v, i) => {
+            return (
+              <HashLink key={i} to={"/Resources#" + v}>
+                <p dangerouslySetInnerHTML={{ __html: v }} />
+              </HashLink>
+            );
+          })}
         </>
-      }
+      )}
     </>
-  )
+  );
 }
 
 function PageContent(props) {
@@ -183,11 +159,10 @@ function PageContent(props) {
           <div key={i}>
             <span className="paragraph-content" id={props.panelLeft[i]}></span>
             <h2 className="title-paragraph">{props.panelLeft[i]}</h2>
-            <p dangerouslySetInnerHTML={{__html: v}} />
+            <p dangerouslySetInnerHTML={{ __html: v }} />
           </div>
         );
       })}
     </>
   );
 }
-

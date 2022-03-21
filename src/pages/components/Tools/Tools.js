@@ -2,9 +2,15 @@ import { Panel } from "../Panel";
 
 export function Tools() {
   let title = "Tools";
-  let panelLeft = ["Visual Studio code", "node", "Github", "ESlint", "CodeSandbox"];
+  let panelLeft = [
+    "Visual Studio code",
+    "node",
+    "Github",
+    "ESlint",
+    "CodeSandbox",
+  ];
   let panelRight = null;
-  let panelMiddle = ["one", "two", "three", "four"];
+  let panelMiddle = ["one", "two", "three", "four", "five"];
   return (
     <Panel
       title={title}

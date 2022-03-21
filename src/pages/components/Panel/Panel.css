@@ -1,18 +1,18 @@
 .context-menu {
-  margin-top: 1em;
   grid-area: menu;
+  width: 12.5%;
   text-align: left;
   top: 2rem;
   position: fixed;
-  min-width: none;
-  font-size: 1.25vw;
+  overflow-wrap: break-word;
+  font-size: 16px;
 }
 .vertical-line-left {
   border-left: 3px solid lightgray;
   height: 100vh;
   position: fixed;
   top: 2rem;
-  left: 20%;
+  left: 12.5%;
   height: 100%;
 }
 
@@ -29,6 +29,8 @@
   grid-area: main;
   text-align: left;
   height: 1000px;
+  position: fixed;
+  left: 12.5%;
 }
 .paragraph-content {
   display: block;
@@ -42,7 +44,6 @@
   position: fixed;
   left: 87.5vw;
   top: 2rem;
-  font-size: 1.25vw;
   text-align: left;
 }
 
@@ -63,12 +64,19 @@
       "footer footer footer footer footer footer footer footer";
     padding: 10px;
   }
+  .page-content {
+    left: 25%;
+  }
   .aside-menu {
     display: none;
   }
   .context-menu {
-    font-size: 2.5vw;
+    width: 25%;
   }
+  .vertical-line-left {
+    left: 25%;
+  }
+
   .vertical-line-right {
     display: none;
   }
@@ -85,6 +93,10 @@
       "footer";
     padding: 10px;
   }
+  .page-content {
+    left: 0%;
+  }
+
   .aside-menu {
     display: none;
   }

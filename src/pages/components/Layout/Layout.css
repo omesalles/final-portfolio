@@ -4,16 +4,15 @@
   display: grid;
   grid-template-areas:
     "header header header header header  header header header"
-    "menu menu main main main main main right"
+    "menu main main main main main main right"
     "footer footer footer footer footer footer footer footer";
   padding: 10px;
   grid-auto-columns: 12.5%;
-
 }
 
 header {
   grid-area: header;
-  background-color:lightgrey;
+  background-color: lightgrey;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -25,7 +24,7 @@ footer {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-auto-columns: 33%;
-  background-color:lightgrey;
+  background-color: lightgrey;
   position: fixed;
   top: calc(100vh - 2rem);
   left: 0px;
@@ -34,12 +33,12 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    header {
-      padding: 0px 10px;
-      display: flex;
-      justify-content: right;
-      align-items: center;
-    }
+  header {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
   .layout {
     font-family: sans-serif;
     text-align: center;
@@ -51,7 +50,6 @@ footer {
     grid-auto-columns: 12.5%;
     padding: 10px;
   }
-
 }
 
 @media screen and (max-width: 328px) {
