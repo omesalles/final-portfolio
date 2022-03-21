@@ -157,13 +157,19 @@ function Resources(props) {
 function PageContent(props) {
   return (
     <>
-      <h1>{props.title}</h1>
+      <h1 id="top">{props.title}</h1>
       {props.panelMiddle.map((v, i) => {
         return (
           <div key={i}>
-            <span className="paragraph-content" id={props.panelLeft[i]}></span>
+            <span
+              className="paragraph-content-position"
+              id={props.panelLeft[i]}
+            ></span>
             <h2 className="title-paragraph">{props.panelLeft[i]}</h2>
-            <p dangerouslySetInnerHTML={{ __html: v }} />
+            <p
+              className="paragraph-content"
+              dangerouslySetInnerHTML={{ __html: v }}
+            />
           </div>
         );
       })}

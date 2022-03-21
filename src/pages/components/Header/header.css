@@ -1,3 +1,14 @@
+.nav-options > a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+.nav-options > a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
 .header-right {
   display: flex;
   justify-content: right;

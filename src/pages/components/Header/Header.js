@@ -3,6 +3,7 @@ import { ReactComponent as CloseMenu } from "../../../assets/x.svg";
 import { ReactComponent as MenuIcon } from "../../../assets/menu.svg";
 import { globalRoutes } from "../../globalRoutes";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import "./header.css";
 
 /* base on https://sdever.medium.com/building-a-responsive-navigation-bar-with-react-css-d9b30af03c20*/
@@ -16,14 +17,14 @@ export function Header() {
       <div className="logo-nav">
         <div className={click ? "nav-options active" : "nav-options"}>
           {globalRoutes.map((item, i) => (
-              <Link
-                key={i}
-                to={item.path}
-                className="option"
-                onClick={closeMobileMenu}
-              >
-                {item.titol}
-              </Link>
+            <HashLink
+              key={i}
+              to={item.path + "#top"}
+              className="option"
+              onClick={closeMobileMenu}
+            >
+              {item.titol}
+            </HashLink>
           ))}
         </div>
       </div>
