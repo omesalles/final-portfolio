@@ -8,9 +8,10 @@ export function CSS() {
     "Grid",
     "Animations",
     "!important",
-    "basic design rules",
+    "Basic design rules",
+    "The Holy Grail",
   ];
-  let panelRight = ["W3Schools", "CSS tricks", "3"];
+  let panelRight = ["W3Schools", "A Complete Guide to Flexbox"];
   let panelMiddle = [
     "Box model",
     "Flex",
@@ -20,6 +21,7 @@ export function CSS() {
       " specific property",
     "The website <a href='http://bettermotherfuckingwebsite.com/'>http://bettermotherfuckingwebsite.com/</a> provides some basic rules to help improve your website " +
       "appearance",
+    "<a href='https://philipwalton.github.io/solved-by-flexbox/'>Solved by Flexbox</a> contains examples of using FlexBox to layout content",
   ];
   return (
     <Panel

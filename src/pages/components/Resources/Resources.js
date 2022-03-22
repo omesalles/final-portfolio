@@ -25,7 +25,8 @@ export function Resources() {
       "to web development and programming in general. The section <a href='https://www.w3schools.com/howto/default.asp'>How To</a> is full of " +
       "ideas how to create common web functionalities",
     "<a href='https://developer.mozilla.org/en-US/docs/Web/'>MDN docs</a> is the technical reference for many things related to web development",
-    "A demonstration of what can be accomplished through CSS-based design. Check how the style sheet completely transforms a webpage.",
+    "A <a href='http://www.csszengarden.com/'>demonstration</a> of what can be accomplished through CSS-based design. Check how the " +
+      "style sheet completely transforms a webpage. The layouts can be a bit obscure and not easy to transfer to your own design.",
     "<a href='https://redux.js.org/introduction/getting-started'>Redux</a> is a JavaScript library that allows you to share information between " +
       "different parts of your web application ensuring consistent information in the various parts and taking care of the rendering",
     "<a href='https://redux.js.org/introduction/core-concepts'>Core Concepts | Redux</a>",
