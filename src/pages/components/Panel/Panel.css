@@ -29,7 +29,6 @@ main {
   width: calc(100% - var(--right-menu-size) - var(--left-menu-size));
   margin-left: 10px;
   margin-right: 5px;
-
 }
 
 .aside-menu {
@@ -42,7 +41,6 @@ main {
   overflow: auto;
   overflow-wrap: anywhere;
 }
-
 
 #top {
   display: block;
@@ -59,7 +57,7 @@ main {
 }
 
 .paragraph-content {
-  padding: 5px;
+  margin: 5px;
   line-height: 1.46;
 }
 
@@ -92,7 +90,7 @@ main {
   margin: 0px;
 }
 
-.aside-menu > h3{
+.aside-menu > h3 {
   padding-right: 10px;
 }
 
@@ -130,14 +128,14 @@ main {
 
 @media screen and (max-width: 768px) {
   * {
-    --right-menu-size:0;
-    --left-menu-size:25%;
+    --right-menu-size: 0;
+    --left-menu-size: 25%;
   }
 }
 
 @media screen and (max-width: 328px) {
   * {
-    --right-menu-size:0;
-    --left-menu-size:0;
-}
+    --right-menu-size: 0;
+    --left-menu-size: 0;
+  }
 }
