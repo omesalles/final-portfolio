@@ -21,6 +21,7 @@ export function Resources() {
     "CSS cheatsheet",
     "HTML-cheatsheet",
     "CSS Specificity",
+    "Reselect library",
   ];
   let panelRight = null;
   let panelMiddle = [
@@ -50,12 +51,14 @@ export function Resources() {
     "<a href='https://www2.deloitte.com/es/es/pages/technology/articles/conoce-todo-sobre-scrum.html'>Agile technicques</a>" +
       " for project management are very common in software development and certainly in web development. Have a look at this " +
       "<a href='https://www.scrum.org/'>website</a>.",
-    "<a href='https://flexboxfroggy.com/#ca'>Have fun learning about flexbox </a>",
+    "Have fun learning about flexbox in <a href='https://flexboxfroggy.com/#ca'>this webpage</a>",
     "<a href='" + process.env.PUBLIC_URL + "/CSS.pdf'>Here</a>",
     "<a href='" + process.env.PUBLIC_URL + "/HTML-CheatSheet.pdf'>Here</a>",
     "<a href='https://polypane.app/css-specificity-calculator/'>CSS Specificity</a> refers to which CSS styles will take preference when there are multiple " +
       "definitions for the same class/tag/id. If you write your CSS files with Visual Studio Code you can see the result of the specificity calculator when " +
       "hovering on the class definition.",
+    "A <a href='https://github.com/reduxjs/reselect'>library</a> for creating memoized 'selector' functions. Commonly used with Redux, " +
+      "but usable with any plain JS immutable data as well.",
   ];
   return (
     <article className="resources">
