@@ -16,6 +16,7 @@ export function Resources() {
     "Yarn and npm",
     "node.js",
     "Material Design",
+    "Agile",
   ];
   let panelRight = null;
   let panelMiddle = [
@@ -40,6 +41,8 @@ export function Resources() {
       "dynamic web page content before the page is sent to the user's web browser.",
     "<A HREF='https://material.io/design'>Material Design</a> is a design language developed by Google based on principles of good design. " +
       "Even without learning the language, one cas extrapolate the good design practices into web apps.",
+    "<a href='https://www2.deloitte.com/es/es/pages/technology/articles/conoce-todo-sobre-scrum.html'>Agile technicques</a>" +
+      " for project management are very common in software development and certainly in web development",
   ];
   return (
     <article className="resources">
