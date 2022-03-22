@@ -36,6 +36,7 @@ export function Panel(props) {
 function ContextMenu({ panelLeft }) {
   return (
     <nav className="context-menu">
+      <span className="paragraph-content"></span>
       <h3>Page Index</h3>
       {panelLeft.map((v, i) => {
         return (
@@ -44,16 +45,13 @@ function ContextMenu({ panelLeft }) {
           </a>
         );
       })}
-      <div className="vertical-line-right"></div>
-      <div className="vertical-line-left"></div>
     </nav>
   );
 }
 
 function PanelDesktop(props) {
-  console.log(props);
   return (
-    <>
+    <main>
       <ContextMenu panelLeft={props.panelLeft} />
       <div className="page-content">
         <PageContent
@@ -62,32 +60,38 @@ function PanelDesktop(props) {
           panelLeft={props.panelLeft}
         />
         <br />
-      </div>
+        <br />
+        </div>
       <aside className="aside-menu">
         <Resources listOfResources={props.panelRight} />
       </aside>
-    </>
+    </main>
   );
 }
 
 function PanelTablet(props) {
   /* transform left side menu into one additional  menu item in the left */
   let copyPanelLeft = [...props.panelLeft];
-  copyPanelLeft.push("Resources");
+  if (props.panelRight != null){
+      copyPanelLeft.push("Resources");
+  }
+  
 
   return (
-    <>
+    <main>
       <ContextMenu panelLeft={copyPanelLeft} />
-      <div className="page-content">
-        <PageContent
-          title={props.title}
-          panelMiddle={props.panelMiddle}
-          panelLeft={copyPanelLeft}
-        />
-        <Resources listOfResources={props.panelRight} />
-        <br />
+      <div className="page-content" >
+      <PageContent
+        title={props.title}
+        panelMiddle={props.panelMiddle}
+        panelLeft={copyPanelLeft}
+      />
+      <Resources listOfResources = {props.panelRight}/>
+      <br />
+      <br />
+      <br />
       </div>
-    </>
+    </main>
   );
 }
 
@@ -104,13 +108,15 @@ function PanelMobile(props) {
   }
 
   return (
-    <>
+    <main>
       <div className="page-content">
+        <span id = "top"></span>
         <h1>{props.title}</h1>
         <Accordio menuItems={accordioObject} />
         <br />
+        <br />
       </div>
-    </>
+    </main>
   );
 }
 
@@ -155,9 +161,11 @@ function Resources(props) {
 }
 
 function PageContent(props) {
+  console.log(props)
   return (
-    <>
-      <h1 id="top">{props.title}</h1>
+    <div>
+      <span id ="top"></span>
+      <h1>{props.title}</h1>
       {props.panelMiddle.map((v, i) => {
         return (
           <div key={i}>
@@ -173,6 +181,6 @@ function PageContent(props) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }

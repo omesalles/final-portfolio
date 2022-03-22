@@ -26,11 +26,14 @@ export function Welcome() {
       "is mostly achieved using media queries in the style sheet definition. However, I have used React to enhance this responsive behaviour" +
       " in two ways:<br>" +
       "<ol>1) While the right menu disapears when the screen decreases thanks to the styling, React allows me to  add it as another item on the left menu,</ol>" +
-      "<ol>2) When the screen decreases to that of an old mobile phone (328px), the whole content is transformed into an accordion control, and the user can select.</ol>",
-    "The main challenge, which is still unresolved, is the layout of the content. The sentences you are reading are plain text with minimal HTML formatting. " +
+      "<ol>2) When the screen decreases to that of an old mobile phone (328px), the whole content is transformed into an accordion control, and the user can "+
+      "easily navigate through the content.</ol>",
+    "The main challenge, which is not fully resolved in this site, is the layout of the content. The sentences you are reading are plain text with minimal HTML formatting. " +
       "This is because the content comes from the JSX program that create the pages, and in there I can't format it. There's the solution to use the " +
       "dangerouslySetInnerHTML React tab, which is used here. In fact there are markdown tools that facilitate editing this kind of variables within a " +
-      "JavaScript program, for instance <a href='https://mdxjs.com/'>mdx</a>, but I havent't used it.",
+      "JavaScript program, for instance <a href='https://mdxjs.com/'>mdx</a>, but I havent't used it. <br>" +
+      "Another challenge is the presentation of links in the Mobile version. The links in the Resources section should be done with the HashLink React component, " +
+      "so they take you to the right paragraph in the Resource page. ",
     "Info about the course",
     "Info about the lecturers",
   ];
