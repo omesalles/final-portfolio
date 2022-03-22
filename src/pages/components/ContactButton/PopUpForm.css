@@ -1,13 +1,10 @@
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
-  position: fixed;
   background-color: #555;
   color: white;
   border: none;
   cursor: pointer;
   opacity: 0.8;
-  bottom: 0px;
-  right: 28px;
   padding: 10px;
 }
 

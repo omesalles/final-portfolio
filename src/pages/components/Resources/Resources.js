@@ -21,11 +21,13 @@ export function Resources() {
     "Webflow is a SaaS application that allows building websites using visual editing software.",
   ];
   return (
-    <Panel
-      title={title}
-      panelLeft={panelLeft}
-      panelRight={panelRight}
-      panelMiddle={panelMiddle}
-    />
+    <article className="resources">
+      <Panel
+        title={title}
+        panelLeft={panelLeft}
+        panelRight={panelRight}
+        panelMiddle={panelMiddle}
+      />
+    </article>
   );
 }

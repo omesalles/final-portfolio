@@ -61,7 +61,7 @@ function PanelDesktop(props) {
         />
         <br />
         <br />
-        </div>
+      </div>
       <aside className="aside-menu">
         <Resources listOfResources={props.panelRight} />
       </aside>
@@ -72,24 +72,23 @@ function PanelDesktop(props) {
 function PanelTablet(props) {
   /* transform left side menu into one additional  menu item in the left */
   let copyPanelLeft = [...props.panelLeft];
-  if (props.panelRight != null){
-      copyPanelLeft.push("Resources");
+  if (props.panelRight != null) {
+    copyPanelLeft.push("Resources");
   }
-  
 
   return (
     <main>
       <ContextMenu panelLeft={copyPanelLeft} />
-      <div className="page-content" >
-      <PageContent
-        title={props.title}
-        panelMiddle={props.panelMiddle}
-        panelLeft={copyPanelLeft}
-      />
-      <Resources listOfResources = {props.panelRight}/>
-      <br />
-      <br />
-      <br />
+      <div className="page-content">
+        <PageContent
+          title={props.title}
+          panelMiddle={props.panelMiddle}
+          panelLeft={copyPanelLeft}
+        />
+        <Resources listOfResources={props.panelRight} />
+        <br />
+        <br />
+        <br />
       </div>
     </main>
   );
@@ -110,7 +109,7 @@ function PanelMobile(props) {
   return (
     <main>
       <div className="page-content">
-        <span id = "top"></span>
+        <span id="top"></span>
         <h1>{props.title}</h1>
         <Accordio menuItems={accordioObject} />
         <br />
@@ -161,10 +160,10 @@ function Resources(props) {
 }
 
 function PageContent(props) {
-  console.log(props)
+  console.log(props);
   return (
-    <div>
-      <span id ="top"></span>
+    <>
+      <span id="top"></span>
       <h1>{props.title}</h1>
       {props.panelMiddle.map((v, i) => {
         return (
@@ -174,13 +173,15 @@ function PageContent(props) {
               id={props.panelLeft[i]}
             ></span>
             <h2 className="title-paragraph">{props.panelLeft[i]}</h2>
-            <p
-              className="paragraph-content"
-              dangerouslySetInnerHTML={{ __html: v }}
-            />
+            <section>
+              <p
+                className="paragraph-content"
+                dangerouslySetInnerHTML={{ __html: v }}
+              />
+            </section>
           </div>
         );
       })}
-    </div>
+    </>
   );
 }
