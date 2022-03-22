@@ -15,7 +15,7 @@ export function Resources() {
     "The CSS battle",
     "Yarn and npm",
     "node.js",
-    "Material Desing",
+    "Material Design",
   ];
   let panelRight = null;
   let panelMiddle = [
