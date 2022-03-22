@@ -4,7 +4,7 @@ import { globalRoutes } from "./pages/globalRoutes";
 import "./App.css";
 function App() {
   return (
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/final-portfolio">
       <Routes>
         <Route path="/" element={<Layout />}>
           {globalRoutes.map((v, i) => {

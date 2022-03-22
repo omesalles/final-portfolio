@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ReactComponent as CloseMenu } from "../../../assets/x.svg";
 import { ReactComponent as MenuIcon } from "../../../assets/menu.svg";
 import { globalRoutes } from "../../globalRoutes";
-import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import "./header.css";
 

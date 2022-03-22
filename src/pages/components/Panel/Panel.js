@@ -160,7 +160,6 @@ function Resources(props) {
 }
 
 function PageContent(props) {
-  console.log(props);
   return (
     <>
       <span id="top"></span>

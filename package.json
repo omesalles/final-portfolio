@@ -2,7 +2,7 @@
   "name": "final-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://omesalles.github.io/final-portfolio/",
+  "homepage": "https://omesalles.github.io/final-portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
