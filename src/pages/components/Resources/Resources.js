@@ -30,7 +30,8 @@ export function Resources() {
       "different parts of your web application ensuring consistent information in the various parts and taking care of the rendering",
     "<a href='https://redux.js.org/introduction/core-concepts'>Core Concepts | Redux</a>",
     "<a href='https://immutable-js.com/'>Library</a> for copying objects in JavaScript, respecting its immutability",
-    "A 172 pages practical book for those learning JavaScript that focuses on the parts of the JavaScript language that will make you more a better programmer",
+    "A 172 pages practical <a href='https://media.oiipdf.com/pdf/ceabcdca-01c2-4f97-95dd-a577f08b9169.pdf'> book</a> for those learning " +
+      "JavaScript that focuses on the parts of the JavaScript language that will make you more a better programmer",
     "Webflow is a SaaS application that allows building websites using visual editing software.",
     "This <a href='https://css-tricks.com/snippets/css/a-guide-to-flexbox/'>page</a> explanations about Flex Box are very graphical and easy to follow. ",
     "This <a href='https://cssbattle.dev/play/1'>page</a> proposes you to small CSS challenges.",

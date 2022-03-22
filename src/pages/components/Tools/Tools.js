@@ -10,7 +10,7 @@ export function Tools() {
     "CodeSandbox",
   ];
   let panelRight = null;
-  let panelMiddle = ["one", "two", "three", "four", "five"];
+  let panelMiddle = ["...", "...", "...", "...", "..."];
   return (
     <Panel
       title={title}

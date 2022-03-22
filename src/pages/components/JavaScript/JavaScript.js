@@ -3,7 +3,7 @@ import { Panel } from "../Panel";
 export function JavaScript() {
   let title = "JavaScript";
   let panelLeft = ["The Spread Operator", "Arrays and Objects"];
-  let panelRight = [];
+  let panelRight = ["W3Schools", "JavaScript - The Good Parts", "node.js"];
   let panelMiddle = [
     "This operator allows copying arrays and objects with a small number of commands. " +
       "The <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax'>MDN</a> " +
