@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        --header-footer-size: 5%;
+        --right-menu-size:12.5%;
+        --left-menu-size:12.5%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+         }
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--header-footer-size);
+        background-color: grey;
+      }
+      main {
+        position: sticky;
+        margin-top: var(--header-footer-size);
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      .context-menu {
+        position: fixed;
+        top: var(--header-footer-size);
+        left: 0;
+        width: var(--right-menu-size);
+        height: calc(100% - 2*var(--header-footer-size));
+        border-right-color: grey;
+        border-right-style: solid;
+        border-right-width: 2px;
+        overflow: auto;
+      }
+
+      .page-content {
+        position: sticky;
+        left: var(--right-menu-size);
+        top: var(--header-footer-size);
+        width: calc(100vw - var(--right-menu-size) - var(--left-menu-size));
+        height: 200vh;
+      }
+      .aside-menu {
+        position: fixed;
+        top: var(--header-footer-size);
+        left: calc(100vw - var(--right-menu-size));
+        width:  var(--left-menu-size);
+        height: calc(100vh - 2*var(--header-footer-size));
+        border-left-color: grey;
+        border-left-style: solid;
+        border-left-width: 2px;
+        overflow: auto;
+      }
+
+      footer {
+        position: fixed;
+        top: calc(100vh - var(--header-footer-size));
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - 2*var(--header-footer-size));
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <header>my header</header>
+    <main>
+      <div class="context-menu">afdadasfdas afdasafafdaa dafadfa</div>
+      <div class="page-content">
+        start<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />end
+      </div>
+      <div class="aside-menu">afdadasfdas afdasafafdaa dafadfa</div>
+    </main>
+    <footer>my footer</footer>
+  </body>
+</html>
