@@ -17,6 +17,7 @@ export function Resources() {
     "node.js",
     "Material Design",
     "Agile",
+    "Flexbox practice",
   ];
   let panelRight = null;
   let panelMiddle = [
@@ -46,6 +47,7 @@ export function Resources() {
     "<a href='https://www2.deloitte.com/es/es/pages/technology/articles/conoce-todo-sobre-scrum.html'>Agile technicques</a>" +
       " for project management are very common in software development and certainly in web development. Have a look at this " +
       "<a href='https://www.scrum.org/'>website</a>.",
+    "<a href='https://flexboxfroggy.com/#ca'>Have fun learning about flexbox </a>",
   ];
   return (
     <article className="resources">
