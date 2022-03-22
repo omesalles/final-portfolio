@@ -18,6 +18,8 @@ export function Resources() {
     "Material Design",
     "Agile",
     "Flexbox practice",
+    "CSS cheatsheet",
+    "HTML-cheatsheet",
   ];
   let panelRight = null;
   let panelMiddle = [
@@ -48,6 +50,11 @@ export function Resources() {
       " for project management are very common in software development and certainly in web development. Have a look at this " +
       "<a href='https://www.scrum.org/'>website</a>.",
     "<a href='https://flexboxfroggy.com/#ca'>Have fun learning about flexbox </a>",
+    "<a href='" + process.env.PUBLIC_URL + "/CSS.pdf'>Here</a>",
+    "<a href='" + process.env.PUBLIC_URL + "/HTML-CheatSheet.pdf'>Here</a>",
+    "<a href='https://polypane.app/css-specificity-calculator/'>CSS Specificity</a> refers to which CSS styles will take preference when there are multiple " +
+      "definitions for the same class/tag/id. If you write your CSS files with Visual Studio Code you can see the result of the specificity calculator when " +
+      "hovering on the class definition.",
   ];
   return (
     <article className="resources">
