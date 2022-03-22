@@ -26,7 +26,7 @@ main {
   position: absolute;
   left: var(--left-menu-size);
   top: var(--header-footer-size);
-  width: calc(100% - var(--right-menu-size) - var(--left-menu-size));
+  width: calc(100% - var(--right-menu-size) - var(--left-menu-size) - 6px);
   margin-left: 10px;
   margin-right: 5px;
 }
