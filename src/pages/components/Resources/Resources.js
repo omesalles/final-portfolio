@@ -20,6 +20,7 @@ export function Resources() {
     "Flexbox practice",
     "CSS cheatsheet",
     "HTML-cheatsheet",
+    "CSS Specificity",
   ];
   let panelRight = null;
   let panelMiddle = [
